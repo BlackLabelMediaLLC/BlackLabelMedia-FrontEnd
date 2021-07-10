@@ -1,0 +1,12 @@
+/* 
+Forwards all files for namespacing purposes.  
+Do not have to @use each individual file when impoerting into sass style sheets. 
+Add files using @forward to this file as needed.
+See SASS documentation for more information
+*/
+
+@forward '_fonts';
+@forward '_colors';
+@forward '_mixins';
+@forward '_variables';
+
