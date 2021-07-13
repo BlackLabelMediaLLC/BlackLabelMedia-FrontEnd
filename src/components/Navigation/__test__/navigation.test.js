@@ -1,6 +1,6 @@
 //Test of Navigation Component
 import React from 'react';
-import {getByTestId, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import Navigation from '../Navigation';
@@ -22,11 +22,3 @@ test('Navigation renders with correct class', () => {
     screen.debug();
 });
 
-test('Navigation renders NavLogo & NavMenu components ', () => {
-  const navLogoElement = component.getByTestId('nav-logo');
-  const navMenuElement =  component.getByTestId('nav-menu');
-
-  expect(navLogoElement.className).toBe('nav-logo');
-  expect(navMenuElement.className).toBe('nav-menu');
-
-})
