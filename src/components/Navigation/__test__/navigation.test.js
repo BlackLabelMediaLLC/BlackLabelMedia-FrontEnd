@@ -9,11 +9,13 @@ import Navigation from '../Navigation';
 describe('Rendering Navigation Component', () => {
 
     afterEach(cleanup);
-    
+
     //Navigation Component Renders
     test('Navigation component renders', () => {
         const { getByTestId } = render(<Navigation/>);
         expect(getByTestId('navigation')).toBeInTheDocument();
+        
+        //screen.debug();
     });
 
     //Child components render
@@ -25,5 +27,7 @@ describe('Rendering Navigation Component', () => {
 
         //test Nav-Menu child component renders
         expect(getByTestId('nav-menu')).toBeInTheDocument();
+
+        //screen.debug();
     });
 });

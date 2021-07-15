@@ -7,7 +7,7 @@ import NavMenu from './NavMenu/NavMenu';
 const Navigation =  () => {
     return (
         <div className='navigation' data-testid="navigation">
-            <NavLogo />
+            <NavLogo logoText={'Black Label Media'} />
             <NavMenu />
         </div>
     );

@@ -1,17 +1,28 @@
 import React from 'react';
-import {getByTestId, render, screen} from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 
 import NavLogo from '../NavLogo';
 
-//render NavLogo Component before all tests
-beforeAll(() => {
-    render(<NavLogo/>);
-});
+afterEach(cleanup);
 
-//test that NavLogo Component renders
-test('NavLogo component renders', () =>{
-    const navLogoEl = screen.getByTestId('nav-logo');
-    expect(navLogoEl.className).toBe('nav-logo');
+describe('NavLogo Component', () =>{
+
+        test('NavLogo Renders', () => {
+            const { getByTestId } = render(<NavLogo/>);
+
+            expect( getByTestId('nav-logo')).toBeInTheDocument();
+            screen.debug();
+        });
+
+        test('NavLogo renders link to page', () => {
+            const { getByRole } = render(<NavLogo />);
+
+            expect(getByRole('link')).toHaveAttribute('href', '/');
+          
+        });
+
+
+
 });
