@@ -9,6 +9,7 @@ import Navigation from '../Navigation';
 describe('Rendering Navigation Component', () => {
 
     afterEach(cleanup);
+    
     //Navigation Component Renders
     test('Navigation component renders', () => {
         const { getByTestId } = render(<Navigation/>);
