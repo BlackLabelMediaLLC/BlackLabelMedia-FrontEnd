@@ -1,24 +1,28 @@
 //Test of Navigation Component
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {cleanup, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import Navigation from '../Navigation';
 
-//component render placeholder for beforeAll function
-let component;
 
-beforeAll(() => {
-    component = render(<Navigation />);
-} )
+describe('Rendering Navigation Component', () => {
 
-//test that Navigation component renders
-test('Navigation renders with correct class', () => {
-    const navElement = component.getByTestId('navigation');
+    afterEach(cleanup);
+    //Navigation Component Renders
+    test('Navigation component renders', () => {
+        const { getByTestId } = render(<Navigation/>);
+        expect(getByTestId('navigation')).toBeInTheDocument();
+    });
 
-    //expects className = navigation to be true.
-    expect(navElement.className).toBe('navigation');    
-    
-    screen.debug();
+    //Child components render
+    test('Children components render', () => {
+        const { getByTestId } = render(<Navigation/>);
+
+        //test Nav-Logo child component renders.
+        expect(getByTestId('nav-logo')).toBeInTheDocument();
+
+        //test Nav-Menu child component renders
+        expect(getByTestId('nav-menu')).toBeInTheDocument();
+    });
 });
-
