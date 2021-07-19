@@ -13,7 +13,7 @@ describe('NavLogo Component', () =>{
             const { getByTestId } = render(<NavLogo/>);
 
             expect( getByTestId('nav-logo')).toBeInTheDocument();
-            screen.debug();
+            //screen.debug();
         });
 
         //checks that NavLogo test is a link
@@ -21,14 +21,6 @@ describe('NavLogo Component', () =>{
             const { getByRole } = render(<NavLogo />);
 
             expect(getByRole('link')).toHaveAttribute('href', '/');
-            screen.debug()
-        });
-
-        //chech that NavLogo recieves logo text props
-        test('NavLogo renders props to page', () => {
-            const { getByText} = render(<NavLogo logoText={'My Logo'}/>);
-
-            expect(getByText(/My Logo/i)).toBeInTheDocument();
-            screen.debug();
+            //screen.debug()
         });
 });

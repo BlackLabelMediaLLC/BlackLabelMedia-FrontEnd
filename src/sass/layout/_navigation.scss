@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+
+
+.navigation{
+    padding: 1%;
+    border: 1px solid black;
+    @include flexBox();
+}
+
+.nav-logo{
+    border: 1px solid blue; 
+    width: 40%;
+    font-family: $logo-text;
+    font-size: $logo-font-size;
+    color: $brandBlack;
+    @include flexBox();
+}
+
+#nav-logo-txt{
+    text-decoration: none;
+    color: $brandBlack;
+}
+
+#brand-gold-color{
+    color: $brandGold;
+}

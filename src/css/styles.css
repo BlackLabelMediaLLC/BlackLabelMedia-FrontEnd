@@ -359,3 +359,41 @@ template {
 /*
     App Component Styling
 */
+.navigation {
+  padding: 1%;
+  border: 1px solid black;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+  display: flexbox;
+}
+
+.nav-logo {
+  border: 1px solid blue;
+  width: 40%;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3em;
+  color: #000000;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+  display: flexbox;
+}
+
+#nav-logo-txt {
+  text-decoration: none;
+  color: #000000;
+}
+
+#brand-gold-color {
+  color: #D4AF37;
+}
+
+/* 
+Forwards all files for namespacing purposes.  
+Do not have to @use each individual file when impoerting into sass style sheets. 
+Add files using @forward to this file as needed.
+See SASS documentation for more information
+*/

@@ -3,3 +3,12 @@
 This file contains all mixins for project.
 
 */
+@mixin flexBox($flex-flow: row wrap, $justify-content: flex-start, $align-items: stretch, $align-content: normal){
+
+    flex-flow: $flex-flow ;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+    display: flexbox;
+    
+}
