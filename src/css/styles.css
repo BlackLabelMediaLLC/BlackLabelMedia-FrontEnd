@@ -360,13 +360,12 @@ template {
     App Component Styling
 */
 .navigation {
+  width: 100%;
   padding: 1%;
   border: 1px solid black;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: normal;
-  display: flexbox;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 .nav-logo {
@@ -375,19 +374,24 @@ template {
   font-family: "Bebas Neue", cursive;
   font-size: 3em;
   color: #000000;
-  flex-flow: row wrap;
+  display: flex;
+  flex-flow: row nowrap;
   justify-content: flex-start;
-  align-items: stretch;
-  align-content: normal;
-  display: flexbox;
+  align-items: center;
+  align-content: center;
 }
 
 #nav-logo-txt {
   text-decoration: none;
   color: #000000;
 }
-
-#brand-gold-color {
+#nav-logo-txt:hover {
+  color: #D4AF37;
+}
+#nav-logo-txt:hover #brand-gold-color {
+  color: #000000;
+}
+#nav-logo-txt #brand-gold-color {
   color: #D4AF37;
 }
 

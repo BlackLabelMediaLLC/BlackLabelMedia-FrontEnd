@@ -1,11 +1,14 @@
 @use '../abstracts/' as *;
-
+//Navigation Component Styling
 
 .navigation{
+    width: 100%;
     padding: 1%;
     border: 1px solid black;
-    @include flexBox();
+    @include flexBox($justify-content: space-between);
 }
+
+//Nav Logo Component Styling
 
 .nav-logo{
     border: 1px solid blue; 
@@ -13,14 +16,24 @@
     font-family: $logo-text;
     font-size: $logo-font-size;
     color: $brandBlack;
-    @include flexBox();
+    @include flexBox($align-items: center, $align-content: center);
+    
 }
 
 #nav-logo-txt{
     text-decoration: none;
     color: $brandBlack;
+
+    &:hover{
+        color: $brandGold;
+
+        #brand-gold-color{
+            color: $brandBlack;
+        }
+    }
+
+    #brand-gold-color{
+        color: $brandGold;
+    }
 }
 
-#brand-gold-color{
-    color: $brandGold;
-}

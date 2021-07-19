@@ -10,7 +10,7 @@ describe('Rendering NavMenu component', () => {
 
     test('NavMenu component renders', () => {
         const { getByRole } = render(<NavMenu/>);
-
+        
         
     });
 

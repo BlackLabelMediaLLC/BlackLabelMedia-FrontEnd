@@ -3,12 +3,34 @@
 This file contains all mixins for project.
 
 */
-@mixin flexBox($flex-flow: row wrap, $justify-content: flex-start, $align-items: stretch, $align-content: normal){
 
-    flex-flow: $flex-flow ;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    align-content: $align-content;
-    display: flexbox;
+//flex box mixin w/default args
+@mixin flexBox($flex-flow: false, $justify-content: false, $align-items: false, $align-content: false){
+
+    display: flex;
     
+    @if $flex-flow{
+        flex-flow: $flex-flow ;
+    }@else{
+        flex-flow: row nowrap;
+    }
+
+    @if $justify-content{
+        justify-content: $justify-content;
+    }@else{
+        justify-content: flex-start;
+    }
+
+    @if $align-items{
+        align-items: $align-items;
+    }@else{
+        $align-items: stretch;
+    }
+
+    @if $align-content{
+        align-content: $align-content;
+    }@else{
+        $align-content: normal;
+    }
 }
+
