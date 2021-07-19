@@ -5,10 +5,9 @@ import '@testing-library/jest-dom/extend-expect';
 
 import Navigation from '../Navigation';
 
+afterEach(cleanup);
 
 describe('Rendering Navigation Component', () => {
-
-    afterEach(cleanup);
 
     //Navigation Component Renders
     test('Navigation component renders', () => {
