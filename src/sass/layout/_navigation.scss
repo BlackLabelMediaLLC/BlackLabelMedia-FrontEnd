@@ -2,46 +2,17 @@
 //Navigation Component Styling
 
 .navigation{
-    border: 1px solid blue;
     width: 100%;
-    padding: 1%;
-    @include flexBox($flex-flow: row wrap);
-
-    .hvr-underline-from-center {
-      display: inline-block;
-      vertical-align: middle;
-      -webkit-transform: perspective(1px) translateZ(0);
-      transform: perspective(1px) translateZ(0);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      position: relative;
-      overflow: hidden;
-    }
-    .hvr-underline-from-center:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      left: 51%;
-      right: 51%;
-      bottom: 0;
-      background: #2098D1;
-      height: 4px;
-      -webkit-transition-property: left, right;
-      transition-property: left, right;
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
-      -webkit-transition-timing-function: ease-out;
-      transition-timing-function: ease-out;
-    }
-    .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-      left: 0;
-      right: 0;
-    }
+    margin: 0;
+    padding: 0%;
+    @include flexBox($flex-flow: row wrap, $justify-content: space-between);
 }
 
 //Nav Logo Component Styling
 
 .nav-logo{ 
     width: 40%;
+    padding: 1%;
     font-family: $logo-text;
     font-size: $logo-font-size;
     color: $brandBlack;
@@ -64,4 +35,59 @@
     #brand-gold-color{
         color: $brandGold;
     }
+}
+
+
+//NavMenu Component Styling
+.nav-menu{
+  width: 50%;
+  padding: 1%;
+  @include flexBox($justify-content: flex-end);
+}
+
+.nav-menu-list{
+  padding: 0;
+  @include flexBox($flex-flow: row wrap, $justify-content: space-evenly, $align-content: center, $align-items:center); 
+
+  .nav-menu-item{
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bolder;
+    color: $brandBlack;
+    @include flexBox($align-content: center);
+
+    &:hover{
+      color: #aeaeae;
+    }
+  }
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: $brandGold;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }

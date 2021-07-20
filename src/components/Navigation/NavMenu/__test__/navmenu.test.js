@@ -30,8 +30,7 @@ describe('Rendering NavMenu component', () => {
             </Router>
             );
 
-        expect(screen.getByRole('link', {name: 'home'})).toHaveAttribute('href', '/');
+        expect(screen.getByRole('link', {name: 'Home'})).toHaveAttribute('href', '/');
         screen.debug();
     });
-
 });

@@ -5,11 +5,13 @@ const NavMenu = () => {
     return(
         <nav className='nav-menu' data-testid="nav-menu">
           <ul className='nav-menu-list'>
-              <Link className='nav-menu-item' to='/'>home</Link>
-              <Link className='nav-menu-item' to='/services'>services</Link>
-              <Link className='nav-menu-item' to='/community'>community</Link>
-              <Link className='nav-menu-item' to='/about'>about</Link>
-              <Link className='nav-menu-item' to='/contact'>contact</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/'>Home</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/services'>Services</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/community'>Community</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/about'>About</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/contact'>Contact</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/signup'>Register</Link>
+              <Link className='nav-menu-item hvr-underline-from-center' to='/login'>Login</Link>
           </ul>
         </nav>
     );

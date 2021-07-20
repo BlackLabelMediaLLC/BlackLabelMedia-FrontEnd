@@ -22,7 +22,7 @@ describe('Routing of main navigation components', () => {
         
         expect(screen.getByText(/home/i)).toBeInTheDocument();
 
-        fireEvent.click(screen.getByText(/home/i));
+        fireEvent.click(screen.getByText(/Home/i));
         
         expect(screen.getByText(/You are on main page./i)).toBeInTheDocument();
 
