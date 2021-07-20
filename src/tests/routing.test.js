@@ -26,10 +26,10 @@ describe('Routing of main navigation components', () => {
         
         expect(screen.getByText(/You are on main page./i)).toBeInTheDocument();
 
-        screen.debug();
+        //screen.debug();
     });
 
-    test('landing on a bad url', () => {
+    test('landing on a bad path/url', () => {
         const history = createMemoryHistory();
         history.push('/fresh/test');
         render(
@@ -38,6 +38,6 @@ describe('Routing of main navigation components', () => {
             </Router>
             );
         expect(screen.getByText(/404 Error. Page Unavailable/i)).toBeInTheDocument();
-
+        //screen.debug();   
     });
 });

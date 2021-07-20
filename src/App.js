@@ -7,8 +7,10 @@ import NoMatch from './components/NoMatch/NoMatch';
 
 function App() {
   return (
-    <div className='App'>
-      <Navigation/> 
+    <>
+      <div className='App'>
+        <Navigation/> 
+      </div>
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -17,8 +19,7 @@ function App() {
           <NoMatch/>
         </Route>
       </Switch>
-    </div>
-  
+    </>
   );
 }
 

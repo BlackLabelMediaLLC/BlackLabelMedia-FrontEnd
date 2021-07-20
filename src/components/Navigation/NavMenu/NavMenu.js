@@ -1,16 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavMenu = () => {
     return(
         <nav className='nav-menu' data-testid="nav-menu">
-          <ul className='nav-list'>
-              <li className='nav-list-item'>
-                <a href='/' className='nav-list-item-link'>home</a>
-              </li>
-              <li className='nav-list-item'><a href='' className='nav-list-item-link'></a></li>
-              <li className='nav-list-item'><a href='' className='nav-list-item-link'></a></li>
-              <li className='nav-list-item'><a href='' className='nav-list-item-link'></a></li>
-              <li className='nav-list-item'><a href='' className='nav-list-item-link'></a></li>
+          <ul className='nav-menu-list'>
+              <Link className='nav-menu-item' to='/'>home</Link>
+              <Link className='nav-menu-item' to='/services'>services</Link>
+              <Link className='nav-menu-item' to='/community'>community</Link>
+              <Link className='nav-menu-item' to='/about'>about</Link>
+              <Link className='nav-menu-item' to='/contact'>contact</Link>
           </ul>
         </nav>
     );

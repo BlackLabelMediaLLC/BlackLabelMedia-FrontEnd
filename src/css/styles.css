@@ -357,12 +357,12 @@ template {
 }
 
 .navigation {
+  border: 1px solid blue;
   width: 100%;
   padding: 1%;
-  border: 1px solid black;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 .navigation .hvr-underline-from-center {
   display: inline-block;

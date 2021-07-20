@@ -2,10 +2,10 @@
 //Navigation Component Styling
 
 .navigation{
+    border: 1px solid blue;
     width: 100%;
     padding: 1%;
-    border: 1px solid black;
-    @include flexBox($justify-content: space-between);
+    @include flexBox($flex-flow: row wrap);
 
     .hvr-underline-from-center {
       display: inline-block;
