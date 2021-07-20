@@ -408,7 +408,15 @@ template {
   align-items: center;
   align-content: center;
 }
-.nav-menu-list .nav-menu-link {
+.nav-menu-list .nav-menu-item {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.nav-menu-list .nav-menu-item .nav-menu-link {
   padding: 1em;
   text-decoration: none;
   font-weight: bolder;
@@ -418,7 +426,7 @@ template {
   justify-content: flex-start;
   align-content: center;
 }
-.nav-menu-list .nav-menu-link:hover {
+.nav-menu-list .nav-menu-item .nav-menu-link:hover {
   color: #888888;
 }
 

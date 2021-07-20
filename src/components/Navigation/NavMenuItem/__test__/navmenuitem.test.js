@@ -4,10 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import App from '../../../../App';
 import NavMenuItem from '../NavMenuItem';
-
-import data from '../../NavMenu/data.json';
 
 afterEach(cleanup);
 
@@ -30,7 +27,7 @@ describe('NavMenuItem Renders', () => {
         //Expects a Link to render route props
         expect(screen.getByRole('link')).toHaveAttribute('href', '/test');
 
-        screen.debug();
+        //screen.debug();
     });
 
 })

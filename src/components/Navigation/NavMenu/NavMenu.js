@@ -1,17 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+
+import NavMenuItem from '../NavMenuItem/NavMenuItem';
+
+import data from './data/data.json';
 
 const NavMenu = () => {
     return(
         <nav className='nav-menu' data-testid="nav-menu">
           <ul className='nav-menu-list'>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/'>Home</Link>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/services'>Services</Link>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/community'>Community</Link>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/about'>About</Link>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/contact'>Contact</Link>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/signup'>Register</Link>
-              <Link className='nav-menu-item hvr-underline-from-center' to='/login'>Login</Link>
+            {
+                data.map((item, idx) => (
+                    <li className="nav-menu-item" key={idx}>
+                        <NavMenuItem itemName={item.name} navRoute={item.route} />
+                    </li>
+                ))
+            }
           </ul>
         </nav>
     );

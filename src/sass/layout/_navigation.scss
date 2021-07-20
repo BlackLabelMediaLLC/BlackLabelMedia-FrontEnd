@@ -49,15 +49,20 @@
   padding: 0;
   @include flexBox($flex-flow: row wrap, $justify-content: space-evenly, $align-content: center, $align-items:center); 
 
-  .nav-menu-link{
-    padding: 1em;
-    text-decoration: none;
-    font-weight: bolder;
-    color: $brandBlack;
-    @include flexBox($align-content: center);
+  .nav-menu-item{
+    list-style-type: none;
+    @include flexBox($align-content: center, $align-items:center);
 
-    &:hover{
-      color: #888888;
+    .nav-menu-link{
+      padding: 1em;
+      text-decoration: none;
+      font-weight: bolder;
+      color: $brandBlack;
+      @include flexBox($align-content: center);
+  
+      &:hover{
+        color: #888888;
+      }
     }
   }
 }
