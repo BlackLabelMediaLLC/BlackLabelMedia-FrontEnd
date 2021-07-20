@@ -19,7 +19,7 @@ describe('Rendering NavMenu component', () => {
             );
        
         expect(screen.getByTestId('nav-menu')).toBeInTheDocument(); 
-        screen.debug();      
+        //screen.debug();      
     });
 
     test('NavMenu renders links.', () => {
@@ -31,6 +31,6 @@ describe('Rendering NavMenu component', () => {
             );
 
         expect(screen.getByRole('link', {name: 'Home'})).toHaveAttribute('href', '/');
-        screen.debug();
+        //screen.debug();
     });
 });

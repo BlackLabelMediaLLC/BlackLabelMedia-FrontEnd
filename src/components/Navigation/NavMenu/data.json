@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "Home",
+        "route": "/home"
+    },
+    {
+        "id": 2,
+        "name": "Services",
+        "route": "/services"
+    },
+    {
+        "id": 3,
+        "name": "Community",
+        "route": "/community"
+    },
+    {
+        "id": 4,
+        "name": "About",
+        "route": "/about"
+    },
+    {
+        "id": 5,
+        "name": "Contact",
+        "route": "/contact"
+    },{
+        "id": 6,
+        "name": "Register",
+        "route": "/signup"
+    },{
+        "id": 7,
+        "name": "Login",
+        "route": "/login"
+    }
+]

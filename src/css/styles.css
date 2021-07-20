@@ -408,7 +408,7 @@ template {
   align-items: center;
   align-content: center;
 }
-.nav-menu-list .nav-menu-item {
+.nav-menu-list .nav-menu-link {
   padding: 1em;
   text-decoration: none;
   font-weight: bolder;
@@ -418,8 +418,8 @@ template {
   justify-content: flex-start;
   align-content: center;
 }
-.nav-menu-list .nav-menu-item:hover {
-  color: #aeaeae;
+.nav-menu-list .nav-menu-link:hover {
+  color: #888888;
 }
 
 .hvr-underline-from-center {
