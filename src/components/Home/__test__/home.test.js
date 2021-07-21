@@ -18,6 +18,20 @@ describe('Home Component', () => {
         );
 
         expect(screen.getByTestId('home-page')).toBeInTheDocument();
+        screen.debug();
     });
+
+    test('Child components render', () => {
+        const history = createMemoryHistory();
+        render(
+            <Router history={history}>
+                <Home />
+            </Router>
+        );
+
+        expect(screen.getByTestId('main-hero')).toBeInTheDocument();
+
+        screen.debug();
+    })
 });
 

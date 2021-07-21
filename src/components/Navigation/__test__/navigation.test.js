@@ -46,21 +46,3 @@ describe('Rendering Navigation Component', () => {
 });
 
 
-describe('Navigation Integration', () => {
-
-test('Clicking nav link renders nav components', () => {
-    const history = createMemoryHistory();
-    render(
-        <Router history={history}>
-            <App />
-        </Router>
-    );
-    userEvent.click(screen.getByRole('link', {name: 'About'}));
-    expect(screen.getByText(/404 Error. Page Unavailable/i)).toBeInTheDocument();
-
-    userEvent.click(screen.getByRole('link', {name: 'Home'}));
-    expect(screen.getByText(/main page/i)).toBeInTheDocument();
-    screen.debug();
-});
-
-});
