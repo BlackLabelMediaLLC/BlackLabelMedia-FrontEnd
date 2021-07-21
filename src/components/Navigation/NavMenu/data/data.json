@@ -31,5 +31,10 @@
         "id": 7,
         "name": "Login",
         "route": "/login"
+    },
+    {
+        "id": 8,
+        "name": "Studio",
+        "route": "/studio"
     }
 ]

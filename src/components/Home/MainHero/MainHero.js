@@ -1,10 +1,9 @@
-import React from 'React';
+import React from 'react';
 
 const MainHero = () => {
     return(
         <section className='main-hero' data-testid='main-hero'>
-
-        
+        adfd
         </section>
     )
 }
