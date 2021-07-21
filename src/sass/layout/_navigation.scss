@@ -1,0 +1,110 @@
+@use '../abstracts/' as *;
+//Navigation Component Styling
+
+.navigation{
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    @include flexBox($flex-flow: row wrap, $justify-content: space-between);
+}
+
+//Nav Logo Component Styling
+
+.nav-logo{ 
+    width: 40%;
+    padding: 1%;
+    font-family: $logo-text;
+    font-size: $logo-font-size;
+    color: $brandBlack;
+    @include flexBox($align-items: center, $align-content: center);
+    
+}
+
+#nav-logo-txt{
+    text-decoration: none;
+    color: $brandBlack;
+
+    -o-transition:color .5s ease-out;
+    -ms-transition:color .5s ease-out;
+    -moz-transition:color .5s ease-out;
+    -webkit-transition:color .5s ease-out;
+    /* ...and now override with proper CSS property */
+    transition:color .5s ease-out;
+
+    #brand-gold-color{
+      color: $brandGold;
+      -o-transition:color .5s ease-out;
+      -ms-transition:color .5s ease-out;
+      -moz-transition:color .5s ease-out;
+      -webkit-transition:color .5s ease-out;
+      transition: color .5s ease-out;
+    }
+
+    &:hover{
+        color: $brandGold;
+
+        #brand-gold-color{
+            color: $brandBlack;
+        }
+    }
+}
+
+
+//NavMenu Component Styling
+.nav-menu{
+  width: 50%;
+  padding: 1%;
+  @include flexBox($justify-content: flex-end);
+}
+
+.nav-menu-list{
+  padding: 0;
+  @include flexBox($flex-flow: row wrap, $justify-content: space-evenly, $align-content: center, $align-items:center); 
+
+  .nav-menu-item{
+    list-style-type: none;
+    @include flexBox($align-content: center, $align-items:center);
+
+    .nav-menu-link{
+      padding: 1em;
+      text-decoration: none;
+      font-weight: bolder;
+      color: $brandBlack;
+      @include flexBox($align-content: center);
+  
+      &:hover{
+        color: #888888;
+      }
+    }
+  }
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: $brandGold;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}

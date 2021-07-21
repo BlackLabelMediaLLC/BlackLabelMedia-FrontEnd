@@ -356,6 +356,126 @@ template {
   display: none;
 }
 
-/*
-    App Component Styling
+.navigation {
+  width: 100%;
+  margin: 0;
+  padding: 0%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  width: 40%;
+  padding: 1%;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3em;
+  color: #000000;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+#nav-logo-txt {
+  text-decoration: none;
+  color: #000000;
+  -o-transition: color 0.5s ease-out;
+  -ms-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -webkit-transition: color 0.5s ease-out;
+  /* ...and now override with proper CSS property */
+  transition: color 0.5s ease-out;
+}
+#nav-logo-txt #brand-gold-color {
+  color: #D4AF37;
+  -o-transition: color 0.5s ease-out;
+  -ms-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+#nav-logo-txt:hover {
+  color: #D4AF37;
+}
+#nav-logo-txt:hover #brand-gold-color {
+  color: #000000;
+}
+
+.nav-menu {
+  width: 50%;
+  padding: 1%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.nav-menu-list {
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.nav-menu-list .nav-menu-item {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.nav-menu-list .nav-menu-item .nav-menu-link {
+  padding: 1em;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #000000;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+.nav-menu-list .nav-menu-item .nav-menu-link:hover {
+  color: #888888;
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #D4AF37;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/* 
+Forwards all files for namespacing purposes.  
+Do not have to @use each individual file when impoerting into sass style sheets. 
+Add files using @forward to this file as needed.
+See SASS documentation for more information
 */
