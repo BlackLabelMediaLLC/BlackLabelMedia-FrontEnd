@@ -13,21 +13,21 @@ afterEach(cleanup);
 
 describe('Navigation Integration', () => {
 
-test('Clicking nav link renders nav components', () => {
-    const history = createMemoryHistory();
-    render(
-        <Router history={history}>
-            <App />
-        </Router>
-    );
+    test('Clicking nav link renders nav components', () => {
+        const history = createMemoryHistory();
+        render(
+            <Router history={history}>
+                <App />
+            </Router>
+        );
 
-    //checks for bad url links
-    userEvent.click(screen.getByRole('link', {name: 'About'}));
-    expect(screen.getByText(/404 Error. Page Unavailable/i)).toBeInTheDocument();
+        //checks for bad url links
+        userEvent.click(screen.getByRole('link', {name: 'About'}));
+        expect(screen.getByTestId('about-page')).toBeInTheDocument();
 
-    userEvent.click(screen.getByRole('link', {name: 'Home'}));
-    expect(screen.getByText(/main page/i)).toBeInTheDocument();
-    screen.debug();
-});
+        userEvent.click(screen.getByRole('link', {name: 'Home'}));
+        expect(screen.getByTestId('home-page')).toBeInTheDocument();
+        //screen.debug();
+    });
 
 });
