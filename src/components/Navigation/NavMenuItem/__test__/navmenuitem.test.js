@@ -5,6 +5,7 @@ import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
 import NavMenuItem from '../NavMenuItem';
+import App from '../../../../App';
 
 import data from '../../NavMenu/data/data.json'
 
@@ -33,4 +34,5 @@ describe('NavMenuItem Renders', () => {
         //screen.debug();
     });
 
-})
+});
+
