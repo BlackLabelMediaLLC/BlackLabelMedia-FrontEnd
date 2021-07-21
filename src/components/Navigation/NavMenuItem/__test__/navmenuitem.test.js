@@ -1,11 +1,9 @@
 import React from 'react';
-import {cleanup, render, screen, fireEvent} from '@testing-library/react';
+import {cleanup, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import userEvent from '@testing-library/user-event';
 
-import App from '../../../../App';
 import NavMenuItem from '../NavMenuItem';
 
 import data from '../../NavMenu/data/data.json'
