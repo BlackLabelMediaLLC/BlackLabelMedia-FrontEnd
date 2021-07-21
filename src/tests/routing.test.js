@@ -24,7 +24,7 @@ describe('Routing of main navigation components', () => {
 
         fireEvent.click(screen.getByText(/Home/i));
         
-        expect(screen.getByText(/You are on main page./i)).toBeInTheDocument();
+        expect(screen.getByTestId('home-page')).toBeInTheDocument();
 
         //screen.debug();
     });
