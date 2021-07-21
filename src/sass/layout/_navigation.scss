@@ -24,16 +24,28 @@
     text-decoration: none;
     color: $brandBlack;
 
+    -o-transition:color .5s ease-out;
+    -ms-transition:color .5s ease-out;
+    -moz-transition:color .5s ease-out;
+    -webkit-transition:color .5s ease-out;
+    /* ...and now override with proper CSS property */
+    transition:color .5s ease-out;
+
+    #brand-gold-color{
+      color: $brandGold;
+      -o-transition:color .5s ease-out;
+      -ms-transition:color .5s ease-out;
+      -moz-transition:color .5s ease-out;
+      -webkit-transition:color .5s ease-out;
+      transition: color .5s ease-out;
+    }
+
     &:hover{
         color: $brandGold;
 
         #brand-gold-color{
             color: $brandBlack;
         }
-    }
-
-    #brand-gold-color{
-        color: $brandGold;
     }
 }
 
