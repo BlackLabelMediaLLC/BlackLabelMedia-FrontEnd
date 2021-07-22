@@ -10,7 +10,7 @@ describe('Home Component', () => {
     test('Home component renders', () => {
         render(<Home/>);
 
-        expect(screen.getByTestId('home-page')).toBeInTheDocument();
+        expect(screen.getByRole('main')).toBeInTheDocument();
         screen.debug();
     });
 
