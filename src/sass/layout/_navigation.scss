@@ -11,7 +11,7 @@
 //Nav Logo Component Styling
 
 .nav-logo{ 
-    width: 40%;
+    // width: 40%;
     padding: 1%;
     font-family: $logo-text;
     font-size: $logo-font-size;
@@ -23,7 +23,6 @@
 #nav-logo-txt{
     text-decoration: none;
     color: $brandBlack;
-
     -o-transition:color .5s ease-out;
     -ms-transition:color .5s ease-out;
     -moz-transition:color .5s ease-out;
@@ -59,7 +58,7 @@
 
 .nav-menu-list{
   padding: 0;
-  @include flexBox($flex-flow: row wrap, $justify-content: space-evenly, $align-content: center, $align-items:center); 
+  @include flexBox($flex-flow: row wrap, $justify-content: space-around, $align-content: center, $align-items:center); 
 
   .nav-menu-item{
     list-style-type: none;
@@ -108,3 +107,4 @@
   left: 0;
   right: 0;
 }
+

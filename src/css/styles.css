@@ -372,7 +372,6 @@ See SASS documentation for more information
 }
 
 .nav-logo {
-  width: 40%;
   padding: 1%;
   font-family: "Bebas Neue", cursive;
   font-size: 3em;
@@ -421,7 +420,7 @@ See SASS documentation for more information
   padding: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 }
