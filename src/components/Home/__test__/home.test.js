@@ -20,6 +20,6 @@ describe('Home Component', () => {
         expect(screen.getByTestId('main-hero')).toBeInTheDocument();
 
         // screen.debug();
-    })
+    });
 });
 

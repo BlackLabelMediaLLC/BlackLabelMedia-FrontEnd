@@ -1,7 +1,7 @@
 [
     {
         "id": "hero-img",
-        "src": "../../src/components/Home/MainHero/images/static-hero-img.png",
+        "src": "../../src/components/Home/MainHero/images/static-hero-img.jpg",
         "alt": "",
         "route": "/services",
         "credit": "Photo by <a href='https://unsplash.com/@cdx2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>C D-X</a> on <a href='https://unsplash.com/s/photos/podcast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
