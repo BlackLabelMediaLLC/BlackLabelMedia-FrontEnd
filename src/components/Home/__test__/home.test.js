@@ -11,7 +11,7 @@ describe('Home Component', () => {
         render(<Home/>);
 
         expect(screen.getByRole('main')).toBeInTheDocument();
-        screen.debug();
+        // screen.debug();
     });
 
     test('Child components render', () => {
@@ -19,7 +19,7 @@ describe('Home Component', () => {
 
         expect(screen.getByTestId('main-hero')).toBeInTheDocument();
 
-        screen.debug();
+        // screen.debug();
     })
 });
 

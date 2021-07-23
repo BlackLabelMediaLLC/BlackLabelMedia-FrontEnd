@@ -12,28 +12,26 @@ describe('Main Hero', () => {
     test('Main Hero renders', () => {
         render(<MainHero />);
         expect(screen.getByTestId('main-hero')).toBeInTheDocument();
-        
-        screen.debug();
     });
 
     test('Main Hero content wrapper renders', () => {
         render(<MainHero/>);
 
-        expect(screen.getByTestId('main-hero')).toContainElement(screen.getById('hero-content-wrapper'));
-        screen.debug();
+        expect(screen.getByTestId('main-hero')).toContainElement(screen.getByTestId('hero-content-wrapper'));
+        // screen.debug();
     });
 
     test('Main hero background image & text renders', () => {
         render(<MainHero/>);
         expect(screen.getByTestId('main-hero')).toHaveStyle('background-image: url("../images/static-hero-img.png")');
-        screen.debug();
+        // screen.debug();
     });
 
-    test('Main Hero Heading', () => {
+    test('Main Hero Headings/Text renders', () => {
         render(<MainHero />);
         expect(screen.getByTestId('main-hero')).toContainElement(screen.getByRole('heading', {level: 1}));
-        screen.debug();
+        expect(screen.getByTestId('main-hero')).toContainElement(screen.getByRole('heading', {level: 2}));
+        // screen.debug();
     }); 
-
 
 });
