@@ -1,5 +1,7 @@
 import React, {useEffect, useState } from 'react';
 
+import heroImg from './images/static-hero-img.jpg';
+
 import axios from 'axios';
 
 import HeroContentWrapper from './HeroContentWrapper';
@@ -17,8 +19,12 @@ const MainHero = () => {
         });
     }, []);
 
+    const styleDiv = {
+        backgroundImage: 'url(' + heroImg + ')'
+    }
+
     return(
-        <section className='main-hero' data-testid='main-hero' >
+        <section className='main-hero' data-testid='main-hero' style={styleDiv}>
             <HeroContentWrapper/>
         </section>
     )

@@ -23,7 +23,7 @@ describe('Main Hero', () => {
 
     test('Main hero background image & text renders', () => {
         render(<MainHero/>);
-        expect(screen.getByTestId('main-hero')).toHaveStyle('background-image: url("../images/static-hero-img.png")');
+        expect(screen.getByTestId('main-hero')).toHaveStyle('background-image: url("static-hero-img.jpg")');
         // screen.debug();
     });
 
