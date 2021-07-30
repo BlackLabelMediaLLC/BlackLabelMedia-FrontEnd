@@ -24,7 +24,6 @@ describe('Main Hero Integration', () => {
 
         userEvent.click(screen.getByText(/check out our services/i));
         expect(screen.getByTestId('services-page')).toBeInTheDocument();
-        //expect(screen.getByTestId('services-page')).not.toBeInTheDocument();
 
         screen.debug();
     });
